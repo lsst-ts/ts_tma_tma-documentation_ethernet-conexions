@@ -8,7 +8,7 @@
 
 ## Introduction
 
-Write here.
+This document describes the network system designed for MCS developed by Tekniker. This document does not cover any other network bellow the Tekniker's network but it is not developed by Tekniker.
 
 ## Reference document list
 
@@ -17,6 +17,8 @@ Write here.
 | **1**   |MCS Design Electrical Schematics|3151_MCS_0022|9.0|
 
 ## Network topology
+
+The network topology is shown in the next diagram. The MCC computer will be access point to the MCS network. To implement the networks the IE3200 and IE3000 CISCO switched are used.
 
 ```plantuml
 @startuml
