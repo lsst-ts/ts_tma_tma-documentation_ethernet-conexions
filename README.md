@@ -202,7 +202,7 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | Switch port | Element                                                | MAC               | IP                  |
 |-------------|--------------------------------------------------------|-------------------|---------------------|
 | Gi1/1       | IE3200                                                 |                   |                     |
-| Gi1/2       | AuxPXI (VLAN 209)                                      | 00:01:05:6d:22:b7 | 192.168.209.11      |
+| Gi1/2       | AuxPXI (VLAN 209)                                      | 00:01:05:6d:22:b6 | 192.168.209.11      |
 | Fa1/1       | HHD                                                    | 00:01:29:60:56:74 | 192.168.209.201     |
 | Fa1/2       | HHD                                                    | Same as Fa1/1     | Same as Fa1/1       |
 | Fa1/3       | HHD                                                    | Same as Fa1/1     | Same as Fa1/1       |
@@ -213,7 +213,7 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | Fa1/8       | TMA IS                                                 | 00:02:48:44:5b:d4 | 192.168.180.10      |
 | Fa2/1       | TMA PXI (VLAN 212)                                     | 00:02:25:03:38:0a | 192.168.212.10      |
 | Fa2/2       | Bosch-Rexroth drives Controller                        | 00:30:d6:13:68:32 | 192.168.212.3       |
-| Fa2/3       | AuxPXI (VLAN 210)                                      | 00:01:05:6d:22:b6 | 192.168.210.10      |
+| Fa2/3       | AuxPXI (VLAN 210)                                      | 00:01:05:6d:22:b7 | 192.168.210.10      |
 | Fa2/4       | CS-CBT-0001 temperature controller                     | 00:03.aa:00:97:d6 | 192.168.210.30      |
 | Fa2/5       | Phase Main Cabinet temperature controller              | 00:90:E8:68:57:79 | 192.168.210.35      |
 | Fa2/6       | AZ-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:76 | 192.168.210.120     |
