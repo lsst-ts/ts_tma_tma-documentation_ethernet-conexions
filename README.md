@@ -22,54 +22,7 @@ any other networks bellow this architecture, as these are not developed by Tekni
 The network topology is shown in the next diagram. The MCC computer will be access point to the MCS network. To implement
 the networks the IE3200 and IE3000 CISCO switched are used.
 
-```plantuml
-@startuml
-
-nwdiag {
-    network rubin {
-        address = "139.229.178.x/24"
-        MCC_EUI [address = "139.229.178.30"]
-    }
-    network MainMCS{
-        address = "192.168.209.x/24";
-        MCC_EUI [address = "192.168.209.200"]
-        TMAPXI [address = "192.168.209.10"]
-        AUXPXI [address = "192.168.209.11"]
-        HHD [address = "192.168.209.201"]
-        SupportPC
-    }
-    network MainAxes{
-        address = "192.168.213.x/24";
-        AXESPXI [address ="192.168.213.11"]
-        TMAPXI [address = "192.168.213.10"]
-    }
-    network EIB{
-        address ="192.168.211.x/24"
-        TMAPXI [address = "192.168.211.10"]
-        AXESPXI [address = "192.168.211.11"]
-        EIB [address = "192.168.211.1"]
-    }
-    network Safety{
-        address ="192.168.180.x/24"
-        TMAPXI [address = "192.168.180.100"]
-        TMAIS_CPU [address = "192.168.180.10"]
-        TMAIS_Pier [address = "192.168.180.11"]
-        TMAIS_AzAux [address = "192.168.180.12"]
-        TMAIS_EL1 [address = "192.168.180.13"] 
-        TMAIS_EL2 [address = "192.168.180.14"]
-    }
-    network Modbus{
-        address ="192.168.210.x/24"
-        AUXPXI [address = "192.168.210.10"]
-        OSS [address = "192.168.210.50"]
-        AZ0001TempController [address = "192.168.210.30"]
-        TempControllers [address = "192.168.210.120-123, 192.168.210.35"]
-        TopEndChiller [address = "192.168.210.100-105"]
-    }
-}
-
-@enduml
-```
+![network architecture](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/lsst-ts/ts_tma_tma-documentation_ethernet-conexions/tet/network-uml.iuml?token=GHSAT0AAAAAACRDFLJU2XYKAOSEEZAUNCD2ZSDNOTQ)
 
 ## Components and descriptions
 
