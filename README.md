@@ -22,7 +22,7 @@ any other networks bellow this architecture, as these are not developed by Tekni
 The network topology is shown in the next diagram. The MCC computer will be access point to the MCS network. To implement
 the networks the IE3200 and IE3000 CISCO switched are used.
 
-![network architecture](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/lsst-ts/ts_tma_tma-documentation_ethernet-conexions/master/network-uml.iuml?token=GHSAT0AAAAAACRDFLJVZN4CDMSMUORK7NUWZSELKZA)
+![network architecture](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/lsst-ts/ts_tma_tma-documentation_ethernet-conexions/master/network-uml.iuml?token=GHSAT0AAAAAACRDFLJVBXYVCG43A2XYCSTCZSELQHQ)
 
 ## Components and descriptions
 
