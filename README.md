@@ -82,7 +82,9 @@ after Tekniker's departure
 In level 6 there is a switch that allows the connection of other elements for diagnosis. It was the point where Alberto
 and Julen connected their laptops when they were in the summit.
 
-## VLANs
+## VLANs (deprecated, now managed by Rubin IT)
+
+The VLANs listed here are from the original design when the switches were managed by Tekniker, the current approach is different and managed by Rubin IT.
 
 ### 192.168.209.X
 
