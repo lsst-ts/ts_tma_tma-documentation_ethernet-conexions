@@ -1,4 +1,4 @@
-# TMA ETHERNET CONNECTIONS
+# Ethernet Connections
 
 | Requested by: | **GHESA**  |
 | ------------- | ---------- |
@@ -22,7 +22,47 @@ any other networks bellow this architecture, as these are not developed by Tekni
 The network topology is shown in the next diagram. The MCC computer will be access point to the MCS network. To implement
 the networks the IE3200 and IE3000 CISCO switched are used.
 
-![network architecture](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/lsst-ts/ts_tma_tma-documentation_ethernet-conexions/master/network-uml.iuml?token=GHSAT0AAAAAACRDFLJVBXYVCG43A2XYCSTCZSELQHQ)
+```{uml}
+@startuml Network Architecture
+
+nwdiag {
+    network rubin {
+        address = "139.229.178.x/24"
+        MCC_EUI [address = "139.229.178.30"]
+    }
+    network TMA{
+        address = "139.229.171.x/24";
+        MCC_EUI [address = "139.229.171.6"]
+        TMAPXI [address = "139.229.171.3"]
+        AUXPXI [address = "139.229.171.4"]
+        SupportPC [address = "139.229.171.5"]
+        MCC [address = "139.229.171.6"]
+        AZ0001TempController [address = "139.229.171.8"]
+        TempControllers [address = "139.229.171.9, 139.229.171.16-19"]
+        TopEndChiller [address = "139.229.171.10-15"]
+        BoschController [address = "139.229.171.23"]
+        AXESPXI [address = "139.229.171.26"]
+        HHD_1_Rubin_AURA [address = "139.229.171.28"]
+        HHD_2_Tekniker_UTE [address = "139.229.171.29"]
+    }
+    network EIB{
+        address ="139.229.161.x/28"
+        TMAPXI [address = "139.229.161.49"]
+        AXESPXI [address = "139.229.161.51"]
+        EIB [address = "139.229.161.50"]
+    }
+    network Safety{
+        address ="192.168.180.x/24"
+        TMAPXI [address = "192.168.180.100"]
+        TMAIS_CPU [address = "192.168.180.10"]
+        TMAIS_Pier [address = "192.168.180.11"]
+        TMAIS_AzAux [address = "192.168.180.12"]
+        TMAIS_EL1 [address = "192.168.180.13"] 
+        TMAIS_EL2 [address = "192.168.180.14"]
+    }
+}
+@enduml
+```
 
 ## Components and descriptions
 
