@@ -22,7 +22,7 @@ any other networks bellow this architecture, as these are not developed by Tekni
 The network topology is shown in the next diagram. The MCC computer will be access point to the MCS network. To implement
 the networks the IE3200 and IE3000 CISCO switched are used.
 
-![Network Architecture](<./resources/Network Architecture.svg>)
+![Network Architecture](./resources/Network_Architecture.svg)
 
 ## Components and descriptions
 
