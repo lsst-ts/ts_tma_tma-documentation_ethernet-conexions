@@ -19,8 +19,7 @@ any other networks bellow this architecture, as these are not developed by Tekni
 
 ## Network topology
 
-The network topology is shown in the next diagram. The MCC computer will be access point to the MCS network. To implement
-the networks the IE3200 and IE3000 CISCO switched are used.
+The network topology is shown in the next diagram. This network is implemented using the IE3200 and IE3000 CISCO switches.
 
 ![Network Architecture](./resources/Network_Architecture.svg)
 
@@ -28,17 +27,18 @@ the networks the IE3200 and IE3000 CISCO switched are used.
 
 ### MCC
 
-This is the computer located in the server room and hosts the EUI. It has two nic, one is dedicated to the local network
-and the other to connect to the telescope network.
+This is the computer located in the server room and hosts the EUI. It has two Network Interface Cards (NIC), one is dedicated
+to the local (Rubin) network and the other to connect to the telescope network.
 
 ### Cisco IE3000 and IE3200
 
 These are two switches located inside the TMA-AZ-CS-CBT-0001 cabinet. The IE3000 is connected to the MCC using a fiber
-optics line. IE3000 has a trunk port connected to IE3200.
+optics line and the IE3000 has a trunk port connected to the IE3200.
 
 ### TMA PXI, AuxPXI and AxesPXI
 
-They are the different controllers used in the MCS. They have several nic to connect to different VLANs.
+They are the different controllers used in the MCS. They have several NICs to connect to different VLANs, after switching
+to the networks proposed by Rubin, some of the NICs are now unused.
 
 ### EIB
 
@@ -46,8 +46,8 @@ Encoder controller.
 
 ### HHD
 
-It is a Hand Held Device, portable user interface, that can be connected only in some points in the telescope. It has 4 connection points
-available in the switch but it uses only one each time.
+It is a Hand Held Device, portable user interface, that can be connected only in some points in the telescope, 4 boxes.
+Only one connection is used each time.
 
 ### TMA IS
 
@@ -55,7 +55,7 @@ It is the PILZ controller for the TMA interlock and safety functions. It is conn
 
 ### Bosch Rexroth drive controller
 
-This controller manages all the auxiliary drives in the TMA.
+This controller manages all the auxiliary drives in the TMA, known as Bosch drives.
 
 ### Temperature controllers
 
@@ -75,56 +75,12 @@ It is a PC located in TMA-AZ-DR-CBT-0001 cabinet. The connection to the IE3200 w
 
 ### Support PC
 
-This is a support PC provided by Tekniker. It is used for engineering purposes. This PC is linked to the VLAN209 and to the
-wireless Rubin network. Originally this PC was installed by Tekniker in level 6, but ir was relocated by Rubin staff
-after Tekniker's departure
+This is a support PC provided by Tekniker. It is used for engineering purposes. This PC is linked to the 139.229.171.0/24
+network and to the wireless Rubin network. Originally this PC was installed by Tekniker in level 6, but it was relocated
+by Rubin staff after Tekniker's departure, at the time of writing this, it was located at the TMA Azimuth platform.
 
 In level 6 there is a switch that allows the connection of other elements for diagnosis. It was the point where Alberto
-and Julen connected their laptops when they were in the summit.
-
-## VLANs (deprecated, now managed by Rubin IT)
-
-The VLANs listed here are from the original design when the switches were managed by Tekniker, the current approach is different and managed by Rubin IT.
-
-### 192.168.209.X
-
-Main MCS network.
-
-### 192.168.210.X
-
-Network for modbus slaves.
-
-### 192.168.211.X
-
-Network for encoder system.
-
-### 192.168.212.X
-
-Network for auxiliary axes communications.
-
-### 192.168.213.X
-
-Network for AXES PXI communications.
-
-### 192.168.180.X
-
-Safety network.
-
-## Protocols in the network
-
-TCP, UPD and SSH.
-
-## Devices with remote access and what protocol being used to access
-
-There are 2 elements with remote access at this moment:
-
-- MCC. VNC connection over ssh over VPN.
-- Support PC. Teamviewer.
-
-## List of users with remote access enabled
-
-- Julen Garcia
-- Alberto Izpizua
+and Julen connected their laptops when they were at the summit.
 
 ## List of macs and IPs
 
@@ -135,7 +91,7 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | Network | MAC               | IP             | FQDN                         |
 | ------- | ----------------- | -------------- | ---------------------------- |
 | Rubin   | 00:1b:1b:c3:9b:33 | 139.229.178.30 | tma-controller01.cp.lsst.org |
-| TMA     | 00:1b:1b:f4:58:76 | 139.229.171.6  | TODO:                        |
+| TMA     | 00:1b:1b:f4:58:76 | 139.229.171.6  |                              |
 
 ### IE3200 switch
 
@@ -187,6 +143,50 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | Fa3/6       | TODO: PLC1 - David Jimenez                             | TODO:             | TODO:           | TODO:                    |
 | Fa3/7       | TODO: tekniker-pc-gis                                  | TODO:             | TODO:           | TODO:                    |
 | Fa3/8 [^4]  | Possible connection for the Support PC when is level 8 | 00:13:3B:5B:23:E4 | 139.229.171.5   | tma-pc01.cp.lsst.org     |
+
+## Protocols in the network
+
+TCP, UPD and SSH.
+
+## Devices with remote access and what protocol being used to access
+
+There are 2 elements with remote access at this moment:
+
+- MCC. VNC connection over ssh over VPN.
+- Support PC. Teamviewer.
+
+## List of users with remote access enabled
+
+- Julen Garcia
+- Alberto Izpizua
+
+## VLANs (DEPRECATED, now managed by Rubin IT)
+
+The VLANs listed here are from the original design when the switches were managed by Tekniker, the current approach is different and managed by Rubin IT.
+
+### 192.168.209.X
+
+Main MCS network.
+
+### 192.168.210.X
+
+Network for modbus slaves.
+
+### 192.168.211.X
+
+Network for encoder system.
+
+### 192.168.212.X
+
+Network for auxiliary axes communications.
+
+### 192.168.213.X
+
+Network for AXES PXI communications.
+
+### 192.168.180.X
+
+Safety network.
 
 [^1]: In this port also Julen's and Alberto`s laptops are connected when they are in level 6. Julen's mac: 34-48-ED-15-CC-F3. Alberto's mac: 34:48:ed:4a:68:7c
 

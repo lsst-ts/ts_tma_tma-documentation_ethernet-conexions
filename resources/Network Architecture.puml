@@ -9,14 +9,14 @@ nwdiag {
         address = "139.229.171.x/24";
         MCC_EUI [address = "139.229.171.6"]
         TMAPXI [address = "139.229.171.3"]
-        AUXPXI [address = "139.229.171.4"]
+        AXESPXI [address = "139.229.171.26"]
         SupportPC [address = "139.229.171.5"]
         MCC [address = "139.229.171.6"]
         AZ0001TempController [address = "139.229.171.8"]
         TempControllers [address = "139.229.171.9, 139.229.171.16-19"]
+        AUXPXI [address = "139.229.171.4"]
         TopEndChiller [address = "139.229.171.10-15"]
         BoschController [address = "139.229.171.23"]
-        AXESPXI [address = "139.229.171.26"]
         HHD_1_Rubin_AURA [address = "139.229.171.28"]
         HHD_2_Tekniker_UTE [address = "139.229.171.29"]
     }
@@ -34,6 +34,12 @@ nwdiag {
         TMAIS_AzAux [address = "192.168.180.12"]
         TMAIS_EL1 [address = "192.168.180.13"] 
         TMAIS_EL2 [address = "192.168.180.14"]
+    }
+    network OSS_net {
+      address = "192.168.210.x/24"
+      description = "OSS network"
+      AUXPXI [address = "192.168.210.10"]
+      OSS [ address = "192.168.210.50" ]
     }
 }
 @enduml
