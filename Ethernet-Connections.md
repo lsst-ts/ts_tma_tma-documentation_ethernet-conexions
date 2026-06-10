@@ -136,7 +136,7 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | Fa2/1       | TMA PXI (VLAN 212)                                     | 00:02:25:03:38:0a | down            |                                     |
 | Fa2/2       | Bosch-Rexroth drives Controller                        | 00:30:d6:2d:8e:24 | 139.229.171.23  | tma-bosch-controller.cp.lsst.org    |
 | Fa2/3       | AuxPXI (VLAN 210)                                      | 00:01:05:6d:22:b7 | 192.168.210.10  | tma-aux-pxi-oss.cp.lsst.org         |
-| Fa2/4       | CS-CBT-0001 temperature controller                     | 00:03:aa:00:97:d6 | 139.229.171.8   | tma-temp-cbt0001..cp.lsst.org       |
+| Fa2/4       | CS-CBT-0001 temperature controller                     | 00:03:aa:00:97:d6 | 139.229.171.8   | tma-temp-cbt0001.cp.lsst.org        |
 | Fa2/5       | Phase Main Cabinet temperature controller              | 00:90:E8:68:57:79 | 139.229.171.9   | tma-temp-phase.cp.lsst.org          |
 | Fa2/6       | AZ-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:76 | 139.229.171.16  | tma-temp-az-cbt-0001.cp.lsst.org    |
 | Fa2/7       | EL-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:92 | 139.229.171.17  | tma-temp-el-cbt-0001.cp.lsst.org    |
