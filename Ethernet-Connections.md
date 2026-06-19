@@ -113,10 +113,10 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | 3 [^1]      | Support PC          |                   |                |                              |
 | 4           | TMA PXI             | 00:80:2f:41:e9:e6 | 139.229.171.3  | tma-tma-pxi.cp.lsst.org      |
 | 5           | IE3000              |                   |                |                              |
-| 6           | TMA PXI (VLAN 213)  | 00:02:25:03:38:2b | down           |                              |
-| 7           | AXES PXI (VLAN 213) | 00:80:2f:38:5d:67 | 139.229.171.26 | tma-axes-pxi.cp.lsst.org     |
+| 6           | TMA PXI             | 00:02:25:03:38:2b | down           |                              |
+| 7           | AXES PXI            | 00:80:2f:38:5d:67 | 139.229.171.26 | tma-axes-pxi.cp.lsst.org     |
 | 8           | TMA PXI (VLAN 1610) | 00:02:25:03:38:3A | 139.229.161.49 | tma-tma-pxi-eib.cp.lsst.org  |
-| 9           | AXES PXI (VLAN 211) | 00:02:25:03:77:2A | 139.229.161.51 | tma-axes-pxi-eib.cp.lsst.org |
+| 9           | AXES PXI            | 00:02:25:03:77:2A | 139.229.161.51 | tma-axes-pxi-eib.cp.lsst.org |
 | 10          | EIB                 | 00:A0:CD:10:0E:64 | 139.229.161.50 | tma-eib.cp.lsst.org          |
 
 ### IE3000 switch
@@ -124,7 +124,7 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | Switch port | Element                                                | MAC               | IP              | FQDN                                |
 | ----------- | ------------------------------------------------------ | ----------------- | --------------- | ----------------------------------- |
 | Gi1/1       | IE3200                                                 |                   |                 |                                     |
-| Gi1/2       | AuxPXI (VLAN 209)                                      | 00:01:05:8f:b1:71 | 139.229.171.4   | tma-aux-pxi.cp.lsst.org             |
+| Gi1/2       | AuxPXI                                                 | 00:01:05:8f:b1:71 | 139.229.171.4   | tma-aux-pxi.cp.lsst.org             |
 | Fa1/1       | HHD (HHD_2 Tekniker-UTE) [^5]                          | 00:01:29:60:56:74 | 139.229.171.30  | tma-hand-held-device01.cp.lsst.org  |
 | Fa1/2       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                     |
 | Fa1/3       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                     |
@@ -133,9 +133,9 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 | Fa1/6       | Free                                                   |                   |                 |                                     |
 | Fa1/7       | TMA PXI (VLAN 180)                                     | 00:02:25:03:38:2a | 192.168.180.100 | TBD                                 |
 | Fa1/8       | TMA IS                                                 | 00:02:48:44:5b:d4 | 192.168.180.10  | TBD                                 |
-| Fa2/1       | TMA PXI (VLAN 212)                                     | 00:02:25:03:38:0a | down            |                                     |
+| Fa2/1       | TMA PXI                                                | 00:02:25:03:38:0a | down            |                                     |
 | Fa2/2       | Bosch-Rexroth drives Controller                        | 00:30:d6:2d:8e:24 | 139.229.171.23  | tma-bosch-controller.cp.lsst.org    |
-| Fa2/3       | AuxPXI (VLAN 210)                                      | 00:01:05:6d:22:b7 | 192.168.210.10  | tma-aux-pxi-oss.cp.lsst.org         |
+| Fa2/3       | AuxPXI                                                 | 00:01:05:6d:22:b7 | 192.168.210.10  | tma-aux-pxi-oss.cp.lsst.org         |
 | Fa2/4       | CS-CBT-0001 temperature controller                     | 00:03:aa:00:97:d6 | 139.229.171.8   | tma-temp-cbt0001.cp.lsst.org        |
 | Fa2/5       | Phase Main Cabinet temperature controller              | 00:90:E8:68:57:79 | 139.229.171.9   | tma-temp-phase.cp.lsst.org          |
 | Fa2/6       | AZ-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:76 | 139.229.171.16  | tma-temp-az-cbt-0001.cp.lsst.org    |
@@ -180,33 +180,10 @@ There are 2 elements with remote access at this moment:
 - Julen Garcia
 - Alberto Izpizua
 
-## VLANs (DEPRECATED, now managed by Rubin IT)
+## VLAN 180 network 192.168.180.X
 
-The VLANs listed here are from the original design when the switches were managed by Tekniker, the current approach is different and managed by Rubin IT.
-
-### 192.168.209.X
-
-Main MCS network.
-
-### 192.168.210.X
-
-Network for modbus slaves.
-
-### 192.168.211.X
-
-Network for encoder system.
-
-### 192.168.212.X
-
-Network for auxiliary axes communications.
-
-### 192.168.213.X
-
-Network for AXES PXI communications.
-
-### 192.168.180.X
-
-Safety network.
+This is the only remaining VLAN from the original design, created for the safety network. Nowadays the VLANs are managed
+by Rubin IT.
 
 [^1]: In this port also Julen's and Alberto`s laptops are connected when they are in level 6. Julen's mac: 34-48-ED-15-CC-F3. Alberto's mac: 34:48:ed:4a:68:7c
 
