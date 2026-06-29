@@ -106,54 +106,54 @@ This computer has 2 NICs one connected to Rubin network and the other to TMA pri
 
 ### IE3200 switch
 
-| Switch port | Element             | MAC               | IP             | FQDN                         |
-| ----------- | ------------------- | ----------------- | -------------- | ---------------------------- |
-| 1           | Rubin network fiber |                   |                |                              |
-| 2           | Rubin network fiber |                   |                |                              |
-| 3 [^1]      | Support PC          |                   |                |                              |
-| 4           | TMA PXI             | 00:80:2f:41:e9:e6 | 139.229.171.3  | tma-tma-pxi.cp.lsst.org      |
-| 5           | IE3000              |                   |                |                              |
-| 6           | TMA PXI             | 00:02:25:03:38:2b | down           |                              |
-| 7           | AXES PXI            | 00:80:2f:38:5d:67 | 139.229.171.26 | tma-axes-pxi.cp.lsst.org     |
-| 8           | TMA PXI (VLAN 1610) | 00:02:25:03:38:3A | 139.229.161.49 | tma-tma-pxi-eib.cp.lsst.org  |
-| 9           | AXES PXI            | 00:02:25:03:77:2A | 139.229.161.51 | tma-axes-pxi-eib.cp.lsst.org |
-| 10          | EIB                 | 00:A0:CD:10:0E:64 | 139.229.161.50 | tma-eib.cp.lsst.org          |
+| Switch port | Element             | MAC               | IP             | FQDN                        |
+| ----------- | ------------------- | ----------------- | -------------- | --------------------------- |
+| 1           | Rubin network fiber |                   |                |                             |
+| 2           | Rubin network fiber |                   |                |                             |
+| 3 [^1]      | Support PC          |                   |                |                             |
+| 4           | TMA PXI             | 00:80:2f:41:e9:e6 | 139.229.171.3  | tma-tmapxi.cp.lsst.org      |
+| 5           | IE3000              |                   |                |                             |
+| 6           | TMA PXI             | 00:02:25:03:38:2b | down           |                             |
+| 7           | AXES PXI            | 00:80:2f:38:5d:67 | 139.229.171.26 | tma-axespxi.cp.lsst.org     |
+| 8           | TMA PXI (VLAN 1610) | 00:02:25:03:38:3A | 139.229.161.49 | tma-tmapxi-eib.cp.lsst.org  |
+| 9           | AXES PXI            | 00:02:25:03:77:2A | 139.229.161.51 | tma-axespxi-eib.cp.lsst.org |
+| 10          | EIB                 | 00:A0:CD:10:0E:64 | 139.229.161.50 | tma-eib.cp.lsst.org         |
 
 ### IE3000 switch
 
-| Switch port | Element                                                | MAC               | IP              | FQDN                                |
-| ----------- | ------------------------------------------------------ | ----------------- | --------------- | ----------------------------------- |
-| Gi1/1       | IE3200                                                 |                   |                 |                                     |
-| Gi1/2       | AuxPXI                                                 | 00:01:05:8f:b1:71 | 139.229.171.4   | tma-aux-pxi.cp.lsst.org             |
-| Fa1/1       | HHD (HHD_2 Tekniker-UTE) [^5]                          | 00:01:29:60:56:74 | 139.229.171.30  | tma-hand-held-device01.cp.lsst.org  |
-| Fa1/2       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                     |
-| Fa1/3       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                     |
-| Fa1/4       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                     |
-| Fa1/5       | TMA PXI Chassis                                        | 00:80:2F:38:6A:3E | 139.229.171.156 | tma-tma-pxi-chassis.cp.lsst.org     |
-| Fa1/6       | Free                                                   |                   |                 |                                     |
-| Fa1/7       | TMA PXI (VLAN 180)                                     | 00:02:25:03:38:2a | 192.168.180.100 | TBD                                 |
-| Fa1/8       | TMA IS                                                 | 00:02:48:44:5b:d4 | 192.168.180.10  | TBD                                 |
-| Fa2/1       | TMA PXI                                                | 00:02:25:03:38:0a | down            |                                     |
-| Fa2/2       | Bosch-Rexroth drives Controller                        | 00:30:d6:2d:8e:24 | 139.229.171.23  | tma-bosch-controller.cp.lsst.org    |
-| Fa2/3       | AuxPXI                                                 | 00:01:05:6d:22:b7 | 192.168.210.10  | tma-aux-pxi-oss.cp.lsst.org         |
-| Fa2/4       | CS-CBT-0001 temperature controller                     | 00:03:aa:00:97:d6 | 139.229.171.8   | tma-temp-cbt0001.cp.lsst.org        |
-| Fa2/5       | Phase Main Cabinet temperature controller              | 00:90:E8:68:57:79 | 139.229.171.9   | tma-temp-phase.cp.lsst.org          |
-| Fa2/6       | AZ-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:76 | 139.229.171.16  | tma-temp-az-cbt-0001.cp.lsst.org    |
-| Fa2/7       | EL-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:92 | 139.229.171.17  | tma-temp-el-cbt-0001.cp.lsst.org    |
-| Fa2/8       | EL-PD-CBT-0002 temperature controller                  | 00:90:E8:68:57:35 | 139.229.171.18  | tma-temp-el-cbt-0002.cp.lsst.org    |
-| Fa3/1       | AZ-PD-TRM-0001 temperature controller                  | 00:90:E8:68:57:8C | 139.229.171.19  | tma-temp-az-trm-0001.cp.lsst.org    |
-| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.10  | tma-tec01.cp.lsst.org               |
-| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.11  | tma-tec02.cp.lsst.org               |
-| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.12  | tma-tec03.cp.lsst.org               |
-| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.13  | tma-tec04.cp.lsst.org               |
-| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.14  | tma-tec05.cp.lsst.org               |
-| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.15  | tma-tec06.cp.lsst.org               |
-| Fa3/3 [^3]  | OSS                                                    |                   | 192.168.210.50  | tma-oss01.cp.lsst.org               |
-| Fa3/4       | Switch 1000                                            |                   |                 |                                     |
-| Fa3/5       | Phase support PC                                       | 00-18-7D-9E-93-1E | 139.229.171.2   | tma-phase-support-pc.cp.lsst.org    |
-| Fa3/6       | TODO: PLC1 - David Jimenez                             | TODO:             | TODO:           | TODO:                               |
-| Fa3/7       | TODO: tekniker-pc-gis                                  | TODO:             | TODO:           | TODO:                               |
-| Fa3/8 [^4]  | Possible connection for the Support PC when is level 8 | 00:13:3B:5B:23:E4 | 139.229.171.5   | tma-tekniker-support-pc.cp.lsst.org |
+| Switch port | Element                                                | MAC               | IP              | FQDN                           |
+| ----------- | ------------------------------------------------------ | ----------------- | --------------- | ------------------------------ |
+| Gi1/1       | IE3200                                                 |                   |                 |                                |
+| Gi1/2       | AuxPXI                                                 | 00:01:05:8f:b1:71 | 139.229.171.4   | tma-auxpxi.cp.lsst.org         |
+| Fa1/1       | HHD (HHD_2 Tekniker-UTE) [^5]                          | 00:01:29:60:56:74 | 139.229.171.30  | tma-hhd01.cp.lsst.org          |
+| Fa1/2       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                |
+| Fa1/3       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                |
+| Fa1/4       | HHD (HHD_2 Tekniker-UTE) [^5]                          | Same as Fa1/1     | Same as Fa1/1   |                                |
+| Fa1/5       | TMA PXI Chassis                                        | 00:80:2F:38:6A:3E | 139.229.171.156 | tma-tmapxi-chassis.cp.lsst.org |
+| Fa1/6       | Free                                                   |                   |                 |                                |
+| Fa1/7       | TMA PXI (VLAN 180)                                     | 00:02:25:03:38:2a | 192.168.180.100 | TBD                            |
+| Fa1/8       | TMA IS                                                 | 00:02:48:44:5b:d4 | 192.168.180.10  | TBD                            |
+| Fa2/1       | TMA PXI                                                | 00:02:25:03:38:0a | down            |                                |
+| Fa2/2       | Bosch-Rexroth drives Controller                        | 00:30:d6:2d:8e:24 | 139.229.171.23  | tma-bosch.cp.lsst.org          |
+| Fa2/3       | AuxPXI                                                 | 00:01:05:6d:22:b7 | 192.168.210.10  | tma-auxpxi-oss.cp.lsst.org     |
+| Fa2/4       | CS-CBT-0001 temperature controller                     | 00:03:aa:00:97:d6 | 139.229.171.8   | tma-temp-cbt01.cp.lsst.org     |
+| Fa2/5       | Phase Main Cabinet temperature controller              | 00:90:E8:68:57:79 | 139.229.171.9   | tma-temp-phase.cp.lsst.org     |
+| Fa2/6       | AZ-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:76 | 139.229.171.16  | tma-temp-azcbt01.cp.lsst.org   |
+| Fa2/7       | EL-PD-CBT-0001 temperature controller                  | 00:90:E8:68:57:92 | 139.229.171.17  | tma-temp-elcbt01.cp.lsst.org   |
+| Fa2/8       | EL-PD-CBT-0002 temperature controller                  | 00:90:E8:68:57:35 | 139.229.171.18  | tma-temp-elcbt02.cp.lsst.org   |
+| Fa3/1       | AZ-PD-TRM-0001 temperature controller                  | 00:90:E8:68:57:8C | 139.229.171.19  | tma-temp-aztrm01.cp.lsst.org   |
+| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.10  | tma-tec01.cp.lsst.org          |
+| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.11  | tma-tec02.cp.lsst.org          |
+| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.12  | tma-tec03.cp.lsst.org          |
+| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.13  | tma-tec04.cp.lsst.org          |
+| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.14  | tma-tec05.cp.lsst.org          |
+| Fa3/2 [^2]  | Top End Chiller                                        |                   | 139.229.171.15  | tma-tec06.cp.lsst.org          |
+| Fa3/3 [^3]  | OSS                                                    |                   | 192.168.210.50  | tma-oss01.cp.lsst.org          |
+| Fa3/4       | Switch 1000                                            |                   |                 |                                |
+| Fa3/5       | Phase support PC                                       | 00-18-7D-9E-93-1E | 139.229.171.2   | tma-phase-pc.cp.lsst.org       |
+| Fa3/6       | TODO: PLC1 - David Jimenez                             | TODO:             | TODO:           | TODO:                          |
+| Fa3/7       | TODO: tekniker-pc-gis                                  | TODO:             | TODO:           | TODO:                          |
+| Fa3/8 [^4]  | Possible connection for the Support PC when is level 8 | 00:13:3B:5B:23:E4 | 139.229.171.5   | tma-tekniker-pc.cp.lsst.org    |
 
 ### Switch 1000
 
